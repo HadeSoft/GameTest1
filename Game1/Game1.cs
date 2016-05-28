@@ -11,6 +11,7 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Player p1;
 
         public Game1()
         {
@@ -27,6 +28,7 @@ namespace Game1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            this.p1 = new Player();
 
             base.Initialize();
         }
@@ -41,6 +43,9 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            Rectangle safeArea = GraphicsDevice.Viewport.TitleSafeArea;
+            Vector2 p1Pos = new Vector2(safeArea.X, safeArea.Y + safeArea.Height / 2);
+            this.p1.Initialize(Content.Load<Texture2D>("assets\\sprites\\players\\player1"), p1Pos);
         }
 
         /// <summary>
@@ -73,10 +78,13 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Pink);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            this.p1.Draw(spriteBatch);
 
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
