@@ -37,3 +37,9 @@
 /processorParam:TextureFormat=Color
 /build:assets/sprites/players/player1.png
 
+#begin assets/Fonts/testFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:assets/Fonts/testFont.spritefont
+

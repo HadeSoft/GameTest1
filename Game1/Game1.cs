@@ -84,6 +84,11 @@ namespace Game1
             spriteBatch.Begin();
             this.p1.Draw(spriteBatch);
 
+            // Frame rate test
+            float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
+            SpriteFont font = Content.Load<SpriteFont>("assets\\Fonts\\testFont");
+            spriteBatch.DrawString(font, frameRate.ToString(), new Vector2(100, 100), Color.Black);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }
