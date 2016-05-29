@@ -35,3 +35,12 @@
       - Event_Collision_With(objType, func) : define event activated on collision with a set object type
       - CollideWith(collisionMask) : set a list of objects to collide with
   
+## World Structure
+
+- World : Grouping of rooms
+  - List of rooms in world
+  - Different worlds for different states of the game e.g. world for main menu, world for a match
+- Room : A visible play area to place objects in
+  - List of objects to place when initiated
+  - Spawn points for players
+  - GUI / HUD for room
