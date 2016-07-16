@@ -56,6 +56,7 @@
 - `RoomLayer` : Seperate layers for sprites to be drawn on
 - `GroupMask` : Group of Objects or RoomLayers to colide with
 - `SpawnPoint` : Creation point for Objects in a Room
+- `Event` : A action or group of actions which are called after a game event is triggered
 
 ## Error Classes
 - `InvalidRoomException` : Error when creating room, values not correctly set
